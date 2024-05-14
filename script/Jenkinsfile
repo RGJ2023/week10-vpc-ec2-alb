@@ -11,5 +11,10 @@ pipeline{
                 sh 'terraform validate -no-color'
             }
         }
+        stage('plan'){
+            steps{
+                sh 'terraform plan -no-color'
+            }
+        }
     }
 }
